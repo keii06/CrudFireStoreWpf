@@ -16,7 +16,7 @@ namespace CrudFireStoreWpf.data.firebase.repository
         {
             DocumentReference docref = FbConfig.Getdb().Collection(collection).Document(document);
             Dictionary<string, object> data = new Dictionary<string, object>();
-            data.Add("My array", users);
+            data.Add("My user array", users);
             docref.SetAsync(data);
             return true;
         }

@@ -1,6 +1,7 @@
 ﻿using CrudFireStoreWpf.data.firebase.repository;
 using CrudFireStoreWpf.domain.service;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -97,6 +98,21 @@ namespace CrudFireStoreWpf.presentation.create
 
                 CreateRepositoryImpl repository = new CreateRepositoryImpl();
                 CreateService service = new CreateService(repository);
+
+                ArrayList array = new ArrayList
+                {
+                    txtname.Text,
+                    txtlastname.Text,
+                    txtaddress.Text,
+                    datefecnac.Text
+                };
+
+                String collection = "WithArrayList";
+                String document = "list";
+
+                service.Add_Array(array, collection, document);
+                MessageBox.Show("Agregado Exitosamente");
+
             }
             catch (Exception error)
             {
