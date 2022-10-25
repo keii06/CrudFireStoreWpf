@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudFireStoreWpf.presentation.create"
         mc:Ignorable="d"
-        Title="create" Height="400" Width="500">
+        Title="create" Height="450" Width="500">
     <Grid>
         <Button x:Name="btnback" Content="MENU" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="31" Width="63" Click="btnback_Click"/>
         <TextBox x:Name="txtname" HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -21,5 +21,8 @@
         <Label Content="Apellidos" HorizontalAlignment="Left" Margin="127,129,0,0" VerticalAlignment="Top"/>
         <Label Content="Dirección" HorizontalAlignment="Left" Margin="127,0,0,0" VerticalAlignment="Center"/>
         <Label Content="FechaNacimiento" HorizontalAlignment="Left" Margin="85,224,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="listObjects" Content="Create List of Objects" HorizontalAlignment="Left" Margin="95,339,0,0" VerticalAlignment="Top" Height="30" Width="123" Click="listObjects_Click"/>
+        <Button x:Name="multipleSets" Content="Create Multiple Sets Of Data" HorizontalAlignment="Left" Margin="250,339,0,0" Height="30" VerticalAlignment="Top" Click="multipleSets_Click"/>
     </Grid>
 </Window>

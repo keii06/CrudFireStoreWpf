@@ -15,8 +15,10 @@ namespace CrudFireStoreWpf.data.firebase.repository
         public bool Add_Array(ArrayList users, string collection, string document)
         {
             DocumentReference docref = FbConfig.Getdb().Collection(collection).Document(document);
-            Dictionary<string, object> data = new Dictionary<string, object>();
-            data.Add("My user array", users);
+            Dictionary<string, object> data = new Dictionary<string, object>
+            {
+                { "My user array", users }
+            };
             docref.SetAsync(data);
             return true;
         }
@@ -32,6 +34,24 @@ namespace CrudFireStoreWpf.data.firebase.repository
         {
             DocumentReference docref = FbConfig.Getdb().Collection(collection).Document(document);
             docref.SetAsync(user);
+            return true;
+        }
+
+        public bool Add_ListOfObjects(Dictionary<string, object> List, String collection, String document)
+        {
+            DocumentReference doc = FbConfig.Getdb().Collection(collection).Document(document);
+            Dictionary<string, object> MainData = new Dictionary<string, object>
+            {
+                { "MyList", List }
+            };
+            doc.SetAsync(MainData);
+            return true;
+        }
+
+        public bool Add_Multiple_SetsOfData(String Collection, Dictionary<string, object> data)
+        {
+            CollectionReference coll = FbConfig.Getdb().Collection(Collection);
+            coll.AddAsync(data);
             return true;
         }
     }

@@ -8,6 +8,16 @@
         Title="update" Height="720" Width="1280" WindowState="Maximized">
     <Grid>
         <Button x:Name="btnback" Content="MENU" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="63" Click="btnback_Click"/>
+        <Button x:Name="btnupdate1" Content="Replace and Deleting" FontSize="20" HorizontalAlignment="Left" Margin="108,134,0,0" VerticalAlignment="Top" Height="65" Width="199" Click="btnupdate1_Click"/>
+        <Button x:Name="btnupdate2" FontSize="20" HorizontalAlignment="Left" Margin="436,134,0,0" VerticalAlignment="Top" Height="65" Width="242" Click="btnupdate2_Click">
+            <TextBlock Text="Update Especific Field and Add New" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnupdate3" FontSize="20" HorizontalAlignment="Left" Margin="780,134,0,0" VerticalAlignment="Top" Height="65" Width="256" Click="btnupdate3_Click">
+            <TextBlock Text="Update_A_Elements_List" TextWrapping="Wrap"/>
+        </Button>
+        <Button x:Name="btnupdate4" FontSize="20" HorizontalAlignment="Left" Margin="557,262,0,0" VerticalAlignment="Top" Height="65" Width="256" Click="btnupdate4_Click">
+            <TextBlock Text="Update_A_Array_Elements" TextWrapping="Wrap"/>
+        </Button>
 
     </Grid>
 </Window>

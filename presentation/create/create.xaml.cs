@@ -1,5 +1,6 @@
 ﻿using CrudFireStoreWpf.data.firebase.repository;
 using CrudFireStoreWpf.domain.service;
+using Google.Type;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,6 +23,9 @@ namespace CrudFireStoreWpf.presentation.create
     /// </summary>
     public partial class create : Window
     {
+
+        CreateRepositoryImpl repository = new CreateRepositoryImpl();
+
         public create()
         {
             InitializeComponent();
@@ -37,8 +41,6 @@ namespace CrudFireStoreWpf.presentation.create
             try
             {
                 validarVacio();
-
-                CreateRepositoryImpl repository = new CreateRepositoryImpl();
                 CreateService service = new CreateService(repository);
 
                 Dictionary<string, object> data = new Dictionary<string, object>()
@@ -65,8 +67,6 @@ namespace CrudFireStoreWpf.presentation.create
             try
             {
                 validarVacio();
-
-                CreateRepositoryImpl repository = new CreateRepositoryImpl();
                 CreateService service = new CreateService(repository);
 
                 Dictionary<string, object> data = new Dictionary<string, object>()
@@ -96,7 +96,7 @@ namespace CrudFireStoreWpf.presentation.create
             {
                 validarVacio();
 
-                CreateRepositoryImpl repository = new CreateRepositoryImpl();
+
                 CreateService service = new CreateService(repository);
 
                 ArrayList array = new ArrayList
@@ -113,6 +113,73 @@ namespace CrudFireStoreWpf.presentation.create
                 service.Add_Array(array, collection, document);
                 MessageBox.Show("Agregado Exitosamente");
 
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        private void listObjects_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CreateService service = new CreateService(repository);
+
+                Dictionary<string, object> List = new Dictionary<string, object>()
+            {
+                {"FirstName","Tacv"},
+                {"LastName","Amazing codeverse"},
+                {"PhoneNumber",1900232},
+            };
+
+                string collection = "WithListOfObjects";
+                string document = "myDoc";
+
+                service.Add_ListOfObjects(List, collection, document);
+                MessageBox.Show("Agregado Exitosamente");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        private void multipleSets_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CreateService service = new CreateService(repository);
+
+                String collection = "WithMultipleSets";
+
+                Dictionary<string, object> data = new Dictionary<string, object>()
+                {
+                    {"FirstName","Tacv"},
+                    {"LastName","Amazing codeverse"},
+                    {"PhoneNumber",1900232},
+                };
+
+                ArrayList array = new ArrayList
+                {
+                    123,
+                    "name",
+                    true,
+                };
+
+                data.Add("MyArray", array);
+
+                Dictionary<string, object> List = new Dictionary<string, object>()
+                {
+                    {"FirstName","Tacv"},
+                    {"LastName","Amazing codeverse"},
+                    {"PhoneNumber",1900232},
+                };
+
+                data.Add("MyList", List);
+
+                service.Add_Multiple_SetsOfData(collection,data);
+                MessageBox.Show("Agregado Exitosamente");
             }
             catch (Exception error)
             {
@@ -139,5 +206,7 @@ namespace CrudFireStoreWpf.presentation.create
                 throw new Exception("La fecha está vacía");
             }
         }
+
+
     }
 }
