@@ -1,0 +1,15 @@
+﻿<Window x:Class="CrudFireStoreWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrudFireStoreWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280" WindowState="Maximized">
+    <Grid>
+        <Button x:Name="btnCreate" Content="CREATE" HorizontalAlignment="Left" Margin="117,276,0,0" VerticalAlignment="Top" Height="100" Width="182" Click="btnCreate_Click"/>
+        <Button x:Name="btnRead" Content="READ" HorizontalAlignment="Left" Margin="399,276,0,0" VerticalAlignment="Top" Height="100" Width="182" Click="btnRead_Click"/>
+        <Button x:Name="btnUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="692,276,0,0" VerticalAlignment="Top" Height="100" Width="182" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="DELETE" HorizontalAlignment="Left" Margin="981,276,0,0" VerticalAlignment="Top" Height="100" Width="182" Click="btnDelete_Click"/>
+    </Grid>
+</Window>
