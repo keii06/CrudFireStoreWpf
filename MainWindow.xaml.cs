@@ -33,28 +33,24 @@ namespace CrudFireStoreWpf
         {
             create create = new create();
             create.ShowDialog();
-            this.Hide();
         }
 
         private void btnRead_Click(object sender, RoutedEventArgs e)
         {
             read read = new read();
             read.ShowDialog();
-            this.Hide();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             update update = new update();
             update.ShowDialog();
-            this.Hide();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             delete delete = new delete();
             delete.ShowDialog();
-            this.Hide();
         }
     }
 }

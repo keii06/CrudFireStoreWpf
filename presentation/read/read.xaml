@@ -5,9 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrudFireStoreWpf.presentation.read"
         mc:Ignorable="d"
-        Title="read" Height="720" Width="1280" WindowState="Maximized">
+        Title="read" Height="720" Width="1280" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="btnback" Content="MENU" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="63" Click="btnback_Click"/>
+        <DataGrid x:Name="dgdatos" IsEnabled="False" Height="300" Margin="10,95,640,309"/>
+
+        <Button x:Name="btnMostrarXDocumento" Content="Mostrar por Documento" HorizontalAlignment="Left" Margin="348,576,0,0" VerticalAlignment="Top" Height="40" Width="155" Click="btnMostrarXDocumento_Click" />
+        <Button x:Name="btnMostrarXColeccion" Content="Mostrar toda la colección" HorizontalAlignment="Left" Margin="730,576,0,0" VerticalAlignment="Top" Height="40" Width="155" Click="btnMostrarXColeccion_Click" />
+
+        <TextBox x:Name="txtiscapital" HorizontalAlignment="Left" Margin="814,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtpopulation" HorizontalAlignment="Left" Margin="814,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtprovince" HorizontalAlignment="Left" Margin="814,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="IsCapital" HorizontalAlignment="Left" Margin="730,156,0,0" VerticalAlignment="Top"/>
+        <Label Content="Population" HorizontalAlignment="Left" Margin="730,226,0,0" VerticalAlignment="Top"/>
+        <Label Content="Province" HorizontalAlignment="Left" Margin="730,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.348"/>
+
+        <TextBox x:Name="txtCollection" HorizontalAlignment="Left" Margin="562,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDocument" HorizontalAlignment="Left" Margin="562,546,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        
+        <Label Content="Colección" HorizontalAlignment="Left" Margin="562,469,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Documento" HorizontalAlignment="Left" Margin="562,515,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Datos de Referencia" HorizontalAlignment="Left" Margin="566,443,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
