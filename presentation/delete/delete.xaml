@@ -9,5 +9,23 @@
     <Grid>
         <Button x:Name="btnback" Content="MENU" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="31" Width="58" Click="btnback_Click"/>
 
+        <Button x:Name="Delete_An_Entired_Document" FontSize="20" Height="100" Width="300" Margin="242,73,738,531" Click="Delete_An_Entired_Document_Click">
+            <TextBlock Text="Delete_An_Entired_Document" TextWrapping="Wrap"/>
+        </Button>
+        <Button x:Name="Delete_A_Field_Within_A_Document" FontSize="20" Height="100" Width="300" Margin="670,73,310,531" Click="Delete_A_Field_Within_A_Document_Click">
+            <TextBlock Text="Delete_A_Field_Within_A_ Document" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="Delete_An_Element_Inside_A_List" FontSize="20" Height="100" Width="300" Margin="242,278,738,326" Click="Delete_An_Element_Inside_A_List_Click">
+            <TextBlock Text="Delete_An_Element_Inside_A_List"/>
+        </Button>
+        <Button x:Name="Delete_An_Element_Inside_A_Array" FontSize="20" Height="100" Width="300" Margin="670,278,310,326" Click="Delete_An_Element_Inside_A_Array_Click">
+            <TextBlock Text="Delete_An_Element_Inside_A_ Array" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="Delete_All_Documents_In_A_Collection" FontSize="20" Height="100" Width="300" Margin="242,482,738,122" Click="Delete_All_Documents_In_A_Collection_Click">
+            <TextBlock Text="Delete_All_Documents_In_A_ Collection" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="Delete_All_Documents_In_A_Collection_With_Limitation" FontSize="20" Height="100" Width="300" Margin="670,482,310,122" Click="Delete_All_Documents_In_A_Collection_With_Limitation_Click" >
+            <TextBlock Text="Delete_All_Documents_In_A_ Collection_With_Limitation" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
     </Grid>
 </Window>
